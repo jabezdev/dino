@@ -1,38 +1,16 @@
-# sv
+# Jabez' Dino site
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## This is available on [dino.jabez.dev](https://dino.jabez.dev)
 
-## Creating a project
+# This is a test to:
+1. Develop a SvelteKit website with Deno
+2. Build the website for deployment
+3. Deploy the site to a VPS for everyone to access
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```sh
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+# What I did
+- I followed the documentation of [Deno](https://docs.deno.com/examples/svelte_tutorial/) to create the sample site
+- Practiced the server <-> client interactions of SvelteKit
+- Built the webapp for Node (@sveltejs/adapter-node) since the Deno adapter isn't well maintained
+- Created this repository and cloned it to my VPS in Digital Ocean
+- Configured PM2 to run the app as a service
+- Configured Caddy as reverse proxy to this simple app

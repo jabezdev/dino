@@ -13,9 +13,13 @@ body {
   background: #ffffff;
 }
 
-a.dinosaur:link,
+a.dinosaur:link {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.2s;
+}
 a.dinosaur:visited {
-  color: #000000;
+  color: #999999;
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -24,7 +28,6 @@ a.dinosaur:active {
   color: aqua;
 }
 
-/* Optional: add hover effect */
 a.dinosaur:hover {
   text-decoration: underline;
 }
