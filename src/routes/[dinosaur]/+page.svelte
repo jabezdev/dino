@@ -8,5 +8,17 @@
 <div>
   <h1>{dinosaur.name}</h1>
   <p>{dinosaur.description}</p>
-  <a href="/">🠠 Back to all dinosaurs</a>
+  <a href="/">Back to all dinosaurs</a>
 </div>
+
+<style>
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+  }
+</style>
+
