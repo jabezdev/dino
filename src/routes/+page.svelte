@@ -10,9 +10,18 @@
   // Make newDino reactive
   let newDino = $state("");
 
-  function addDino() {
+  async function addDino() {
     if (newDino.trim()) {
+      // Update local state
       dinosaurs = [...dinosaurs, { name: newDino }];
+
+      // Send to backend
+      await fetch('/api/add-dino', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: newDino })
+      });
+
       newDino = "";
     }
   }
