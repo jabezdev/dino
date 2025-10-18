@@ -4,6 +4,11 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
+
+# Ensure SvelteKit internal files are generated
+RUN npx svelte-kit sync
+
+# Build the app (outputs to /app/build)
 RUN npm run build
 
 # Step 2: Serve with Nginx
